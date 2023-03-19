@@ -12,8 +12,8 @@ const StyledHeader = styled(AppBar)`
 `;
 
 const Component = styled(Box)`
-margin-left:12%;
-line-height:0;
+    margin-left:12%;
+    line-height:0;
 `
 
 const SubHeading = styled(Typography)`
@@ -27,15 +27,10 @@ const PlusImage = styled('img')({
     marginLeft: 4
 })
 
-
-
-const CustomButtonWrapper = styled('span')(({ theme }) => ({
+const CustomButtonWrapper = styled(Box)`
     margin: '0 5% 0 auto',
-    [theme.breakpoints.down('sm')]: {
-        display: 'none'
-    }
-}));
-
+`
+    
 
 const Header = () => {
     const logoURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
@@ -44,7 +39,7 @@ const Header = () => {
         <StyledHeader position="fixed">
             <Toolbar style={{ minHeight: 55 }}>
                 <Component>
-                    <img src={logoURL} style={{ width: 75 }} alt="logo"/>
+                    <img src={logoURL} style={{ width: 75 }} alt="logo" />
                     <Box component="span" style={{ display: 'flex' }}>
                         <SubHeading>Explore&nbsp;
                             <Box component="span" style={{ color: '#FFE500' }}>
